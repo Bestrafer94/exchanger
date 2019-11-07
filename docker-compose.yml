@@ -46,5 +46,13 @@ services:
     env_file:
       - .env
 
+  redis:
+    image: redis:${REDIS_VERSION}
+    ports:
+      - ${REDIS_PORT}:6379
+    volumes:
+      - redis:/data
+
 volumes:
   mysql:
+  redis:

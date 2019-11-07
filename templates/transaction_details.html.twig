@@ -1,0 +1,72 @@
+{% block body %}
+    {% include 'base.html.twig' %}
+
+    <h1>Transaction details</h1>
+    <br>
+    {% if transaction is defined %}
+    <h4>Change target currency:</h4>
+    <div>
+        {{ form_start(targetCurrencyChangeForm, {'action': path('target_currency_change', {id: transaction.id})}) }}
+        {{ form_widget(targetCurrencyChangeForm) }}
+
+        <input type="submit" class="btn btn-lg btn-primary" value="Change" />
+        {{ form_end(targetCurrencyChangeForm) }}
+    </div>
+    <br>
+    <table class="table table-striped">
+        <tr>
+            <th>ID:</th>
+            <td>{{ transaction.id }}
+        </tr>
+        <tr>
+            <th>Base amount:</th>
+            <td>{{ transaction.base_amount|number_format(2, '.') }}</td>
+        </tr>
+        <tr>
+            <th>Base currency:</th>
+            <td>{{ transaction.base_currency }}</td>
+        </tr>
+        <tr>
+            <th>Target amount:</th>
+            <td>{{ transaction.target_amount|number_format(2, '.') }}</td>
+        </tr>
+        <tr>
+            <th>Target currency:</th>
+            <td>{{ transaction.target_currency }}</td>
+        </tr>
+        <tr>
+            <th>Exchange rate:</th>
+            <td>{{ transaction.exchange_rate|number_format(5, '.') }}</td>
+        </tr>
+        <tr>
+            <th>Operation type:</th>
+            <td>{{ transaction.operation_type }}</td>
+        </tr>
+        <tr>
+            <th>Payment method:</th>
+            <td>{{ transaction.payment_method }}</td>
+        </tr>
+        <tr>
+            <th>Created at:</th>
+            <td>{{ transaction.created_at }}</td>
+        </tr>
+        <tr>
+            <th>Updated at:</th>
+            <td>{{ transaction.updated_at ?? '-' }}</td>
+        </tr>
+        <tr>
+            <th>Client IP:</th>
+            <td>{{ transaction.client_ip }}</td>
+        </tr>
+    </table>
+    {% endif %}]
+
+    {% if errorMessage is defined %}
+        <h1>Operation failed!</h1>
+        <h3>Error message:</h3>
+        <div class="center">{{ errorMessage }}</div>
+        <h3>Status code:</h3>
+        <div class="center">{{ statusCode }}</div>
+    {% endif %}
+
+{% endblock %}

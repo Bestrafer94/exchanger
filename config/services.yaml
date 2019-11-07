@@ -23,5 +23,25 @@ services:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
 
+    App\Handler\TransactionCreateCommandHandler:
+        tags:
+            - { name: tactician.handler, command: App\Handler\Command\TransactionCreateCommand }
+
+    App\Handler\TransactionsListCommandHandler:
+        tags:
+            - { name: tactician.handler, command: App\Handler\Command\TransactionsListCommand }
+
+    App\Handler\TransactionDetailsCommandHandler:
+        tags:
+            - { name: tactician.handler, command: App\Handler\Command\TransactionDetailsCommand }
+
+    App\Handler\TargetCurrencyChangeCommandHandler:
+        tags:
+            - { name: tactician.handler, command: App\Handler\Command\TargetCurrencyChangeCommand }
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    GuzzleHttp\Client:
+
+    App\Cache\CacheStorageInterface: '@App\Cache\RedisCacheStorage'

@@ -1,0 +1,12 @@
+{% block body %}
+    {% include 'base.html.twig' %}
+    <h1>Exchange money</h1>
+    <div>
+        {{ form_start(exchangeForm) }}
+        {{ form_widget(exchangeForm) }}
+
+        <input type="submit" class="btn btn-lg btn-primary" value="Exchange" />
+        {{ form_end(exchangeForm) }}
+    </div>
+
+{% endblock %}

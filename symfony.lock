@@ -1,4 +1,10 @@
 {
+    "composer/semver": {
+        "version": "1.5.0"
+    },
+    "composer/xdebug-handler": {
+        "version": "1.4.0"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -96,11 +102,62 @@
     "fig/link-util": {
         "version": "1.0.0"
     },
+    "friendsofphp/php-cs-fixer": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.2",
+            "ref": "cc05ab6abf6894bddb9bbd6a252459010ebe040b"
+        },
+        "files": [
+            ".php_cs.dist"
+        ]
+    },
+    "guzzlehttp/guzzle": {
+        "version": "6.4.1"
+    },
+    "guzzlehttp/promises": {
+        "version": "v1.3.1"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.6.1"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "knplabs/knp-components": {
+        "version": "v2.2.0"
+    },
+    "knplabs/knp-paginator-bundle": {
+        "version": "v4.0.0"
+    },
+    "league/tactician": {
+        "version": "v1.0.3"
+    },
+    "league/tactician-bundle": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "222c3d39d38378bc6a9790a0b5baf841ba6679b9"
+        },
+        "files": [
+            "config/packages/league_tactician.yaml"
+        ]
+    },
+    "league/tactician-container": {
+        "version": "2.0.0"
+    },
+    "league/tactician-logger": {
+        "version": "v0.10.0"
+    },
     "monolog/monolog": {
         "version": "1.25.1"
+    },
+    "myclabs/deep-copy": {
+        "version": "1.9.3"
     },
     "nikic/php-parser": {
         "version": "v4.2.5"
@@ -111,6 +168,15 @@
     "ocramius/proxy-manager": {
         "version": "2.1.1"
     },
+    "phar-io/manifest": {
+        "version": "1.0.3"
+    },
+    "phar-io/version": {
+        "version": "2.0.1"
+    },
+    "php-cs-fixer/diff": {
+        "version": "v1.3.0"
+    },
     "phpdocumentor/reflection-common": {
         "version": "2.0.0"
     },
@@ -120,17 +186,95 @@
     "phpdocumentor/type-resolver": {
         "version": "1.0.1"
     },
+    "phpspec/prophecy": {
+        "version": "1.9.0"
+    },
+    "phpunit/php-code-coverage": {
+        "version": "7.0.8"
+    },
+    "phpunit/php-file-iterator": {
+        "version": "2.0.2"
+    },
+    "phpunit/php-text-template": {
+        "version": "1.2.1"
+    },
+    "phpunit/php-timer": {
+        "version": "2.1.2"
+    },
+    "phpunit/php-token-stream": {
+        "version": "3.1.1"
+    },
+    "phpunit/phpunit": {
+        "version": "4.7",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.7",
+            "ref": "f1546d78502f904f37f7b47a42b1444cbf1d3423"
+        },
+        "files": [
+            ".env.test",
+            "phpunit.xml.dist",
+            "config/bootstrap.php",
+            "tests/.gitignore"
+        ]
+    },
+    "predis/predis": {
+        "version": "v1.1.1"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
     "psr/container": {
         "version": "1.0.0"
     },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/link": {
         "version": "1.0.0"
     },
     "psr/log": {
         "version": "1.1.2"
+    },
+    "ralouphie/getallheaders": {
+        "version": "3.0.3"
+    },
+    "sebastian/code-unit-reverse-lookup": {
+        "version": "1.0.1"
+    },
+    "sebastian/comparator": {
+        "version": "3.0.2"
+    },
+    "sebastian/diff": {
+        "version": "3.0.2"
+    },
+    "sebastian/environment": {
+        "version": "4.2.2"
+    },
+    "sebastian/exporter": {
+        "version": "3.1.2"
+    },
+    "sebastian/global-state": {
+        "version": "3.0.0"
+    },
+    "sebastian/object-enumerator": {
+        "version": "3.0.3"
+    },
+    "sebastian/object-reflector": {
+        "version": "1.1.1"
+    },
+    "sebastian/recursion-context": {
+        "version": "3.0.0"
+    },
+    "sebastian/resource-operations": {
+        "version": "2.0.1"
+    },
+    "sebastian/type": {
+        "version": "1.1.3"
+    },
+    "sebastian/version": {
+        "version": "2.0.1"
     },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
@@ -319,7 +463,7 @@
             "ref": "b0582341f1df39aaf3a9a866cdbe49937da35984"
         },
         "files": [
-            ".env.test",
+            ".env",
             "bin/phpunit",
             "config/bootstrap.php",
             "phpunit.xml.dist",
@@ -500,6 +644,9 @@
     },
     "symfony/yaml": {
         "version": "v4.3.6"
+    },
+    "theseer/tokenizer": {
+        "version": "1.1.3"
     },
     "twig/twig": {
         "version": "v2.12.1"

@@ -15,6 +15,10 @@ RUN apt-get update -qq && apt-get install -y -qq \
     libxml2-dev \
     libzip-dev
 
+RUN pecl install -o -f redis \
+&&  rm -rf /tmp/pear \
+&&  docker-php-ext-enable redis
+
 RUN docker-php-ext-install -j$(nproc) zip
 
 WORKDIR /usr/src/app
